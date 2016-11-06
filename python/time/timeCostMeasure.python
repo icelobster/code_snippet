@@ -1,0 +1,16 @@
+# 用来度量程序运行时间的
+
+import time
+
+def test():
+	pass
+
+t = time.process_time()
+test()
+processCostTime = time.process_time() - t
+#processCostTime就是test函数执行所花的时间，单位是秒，推荐用这个，因为这个的精度非常高
+
+t2 = time.time()
+test()
+processCostTime = time.time() - t
+#processCostTime就是test函数执行所花的时间，单位是秒，这个的精度不高，是秒级的
